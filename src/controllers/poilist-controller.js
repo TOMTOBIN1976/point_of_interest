@@ -18,7 +18,7 @@ export const poilistController = {
       const newFeature = {
         description: request.payload.description,
         location: request.payload.location,
-        category: Number(request.payload.category),
+        category: request.payload.category,
       };
       await db.featureStore.addFeature(poilist._id, newFeature);
       return h.redirect(`/poilist/${poilist._id}`);

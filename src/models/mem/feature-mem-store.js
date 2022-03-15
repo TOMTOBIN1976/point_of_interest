@@ -7,9 +7,9 @@ export const featureMemStore = {
     return features;
   },
 
-  async addTrack(poilistId, feature) {
+  async addFeature(poilistId, feature) {
     feature._id = v4();
-    feature.playlistid = playlistId;
+    feature.poilistid = poilistId;
     features.push(feature);
     return feature;
   },
