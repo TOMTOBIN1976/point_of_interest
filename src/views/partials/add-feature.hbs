@@ -1,0 +1,17 @@
+<form class="box" action="/playlist/{{playlist._id}}/addtrack" method="POST">
+  <label>Enter Feature Details:</label>
+  <div class="field is-horizontal">
+    <div class="field-body">
+      <div class="field">
+        <input class="input" type="text" placeholder="Enter Description" name="title">
+      </div>
+      <div class="field">
+        <input class="input" type="text" placeholder="Enter Location (lat,lng)" name="artist">
+      </div>
+      <div class="field">
+        <input class="input" type="text" placeholder="Enter Category" name="duration">
+      </div>
+    </div>
+  </div>
+  <button class="button is-primary">Add Feature</button>
+</form>
