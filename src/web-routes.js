@@ -17,5 +17,5 @@ export const webRoutes = [
   { method: "POST", path: "/dashboard/addpoilist", config: dashboardController.addPoilist },
 
   { method: "GET", path: "/poilist/{id}", config: poilistController.index },
-  { method: "POST", path: "/poilist/{id}/addfeature", config: poilistController.addFeature },
+  { method: "POST", path: "/poilist/{id}/addFeature", config: poilistController.addFeature },
 ];

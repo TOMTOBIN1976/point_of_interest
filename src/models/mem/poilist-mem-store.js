@@ -1,4 +1,5 @@
 import { v4 } from "uuid";
+import { featureMemStore } from "./feature-mem-store.js";
 
 let poilists = [];
 
@@ -14,7 +15,9 @@ export const poilistMemStore = {
   },
 
   async getPoilistById(id) {
-    return poilists.find((poilist) => poilist._id === id);
+    const list = poilists.find((poilist) => poilist._id === id);
+    list.features = await featureMemStore.getFeaturesByPoilistId(list._id);
+    return list;
   },
 
   async deletePoilistById(id) {
