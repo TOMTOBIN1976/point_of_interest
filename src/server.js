@@ -3,8 +3,10 @@ import Hapi from "@hapi/hapi";
 import path from "path";
 import { fileURLToPath } from "url";
 import Handlebars from "handlebars";
+import Cookie from "@hapi/cookie";
 import { webRoutes } from "./web-routes.js";
 import { db } from "./models/db.js";
+import { accountsController } from "./controllers/accounts-controller.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -16,6 +18,7 @@ async function init() {
   });
 
   await server.register(Vision);
+  await server.register(Cookie);
 
   server.views({
     engines: {
@@ -28,6 +31,17 @@ async function init() {
     layout: true,
     isCached: false,
   });
+
+  server.auth.strategy("session", "cookie", {
+    cookie: {
+      name: "poi",
+      password: "secretpasswordnotrevealedtoanyone",
+      isSecure: false,
+    },
+    redirectTo: "/",
+    validateFunc: accountsController.validate,
+  });
+  // server.auth.default("session");
 
   db.init();
   server.route(webRoutes);
