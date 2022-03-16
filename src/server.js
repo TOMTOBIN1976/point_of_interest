@@ -1,9 +1,9 @@
 import Vision from "@hapi/vision";
 import Hapi from "@hapi/hapi";
+import Cookie from "@hapi/cookie";
 import path from "path";
 import { fileURLToPath } from "url";
 import Handlebars from "handlebars";
-import Cookie from "@hapi/cookie";
 import { webRoutes } from "./web-routes.js";
 import { db } from "./models/db.js";
 import { accountsController } from "./controllers/accounts-controller.js";
@@ -41,7 +41,7 @@ async function init() {
     redirectTo: "/",
     validateFunc: accountsController.validate,
   });
-  // server.auth.default("session");
+  server.auth.default("session");
 
   db.init();
   server.route(webRoutes);

@@ -25,7 +25,11 @@ export const poilistMemStore = {
     poilists.splice(index, 1);
   },
 
+  async getUserPoilists(userid) {
+    return poilists.filter((poilist) => poilist.userid === userid);
+  },
+
   async deleteAllPoilists() {
     poilists = [];
-  },
+  },  
 };
