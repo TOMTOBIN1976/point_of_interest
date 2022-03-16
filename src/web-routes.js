@@ -18,4 +18,7 @@ export const webRoutes = [
 
   { method: "GET", path: "/poilist/{id}", config: poilistController.index },
   { method: "POST", path: "/poilist/{id}/addFeature", config: poilistController.addFeature },
+
+  { method: "GET", path: "/dashboard/deletepoilist/{id}", config: dashboardController.deletePoilist },
+  { method: "GET", path: "/poilist/{id}/deletefeature/{featureid}", config: poilistController.deleteFeature },
 ];

@@ -36,4 +36,13 @@ export const dashboardController = {
       return h.redirect("/dashboard");
     },
   },
+
+  deletePoilist: {
+    handler: async function (request, h) {
+      const poilist = await db.poilistStore.getPoilistById(request.params.id);
+      await db.poilistStore.deletePoilistById(poilist._id);
+      return h.redirect("/dashboard");
+    },
+  },
+
 };

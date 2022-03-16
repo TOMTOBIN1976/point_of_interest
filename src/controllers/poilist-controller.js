@@ -24,4 +24,12 @@ export const poilistController = {
       return h.redirect(`/poilist/${poilist._id}`);
     },
   },
+
+  deleteFeature: {
+    handler: async function(request, h) {
+      const poilist = await db.poilistStore.getPoilistById(request.params.id);
+      await db.featureStore.deleteFeature(request.params.trackid);
+      return h.redirect(`/poilist/${poilist._id}`);
+    },
+  },
 };
