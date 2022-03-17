@@ -5,7 +5,7 @@ import { testPoilists, castle } from "./fixtures.js";
 suite("Point of Interest Model tests", () => {
 
   setup(async () => {
-    db.init("json");
+    db.init("");
     await db.poilistStore.deleteAllPoilists();
     for (let i = 0; i < testPoilists.length; i += 1) {
       // eslint-disable-next-line no-await-in-loop

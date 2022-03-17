@@ -14,16 +14,30 @@ export const poilistMemStore = {
     return poilist;
   },
 
+//  async getPoilistById(id) {
+//  const list = poilists.find((poilist) => poilist._id === id);
+//  list.features = await featureMemStore.getFeaturesByPoilistId(list._id);
+//  return list;
+//  },
+
   async getPoilistById(id) {
     const list = poilists.find((poilist) => poilist._id === id);
-    list.features = await featureMemStore.getFeaturesByPoilistId(list._id);
-    return list;
+    if (list) {
+      list.features = await featureMemStore.getFeaturesByPoilistId(list._id);
+      return list;
+    }
+    return null;
   },
+
+//  async deletePoilistById(id) {
+//    const index = poilists.findIndex((poilist) => poilist._id === id);
+//    poilists.splice(index, 1);
+//  },
 
   async deletePoilistById(id) {
     const index = poilists.findIndex((poilist) => poilist._id === id);
-    poilists.splice(index, 1);
-  },
+    if (index !== -1) poilists.splice(index, 1);
+  },  
 
   async getUserPoilists(userid) {
     return poilists.filter((poilist) => poilist.userid === userid);
