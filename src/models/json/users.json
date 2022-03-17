@@ -1,3 +1,18 @@
 {
-  "users": []
+  "users": [
+    {
+      "firstName": "Test",
+      "lastName": "Testing",
+      "email": "testing@icloud.com",
+      "password": "secret",
+      "_id": "39052e04-7e87-41b7-a23b-99e0e3b06939"
+    },
+    {
+      "firstName": "Verification",
+      "lastName": "Verification",
+      "email": "verificatio@gmail.com",
+      "password": "secret",
+      "_id": "8e6387e9-9352-4c22-a381-1f6512e9475a"
+    }
+  ]
 }
