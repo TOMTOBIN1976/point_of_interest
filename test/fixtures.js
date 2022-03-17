@@ -25,3 +25,19 @@
       password: "secret",
     },
   ];
+
+  export const castle = {
+    title: "Cahircastle"
+  };
+  
+  export const testPoilists = [
+    {
+      title: "Rock of Cashel"
+    },
+    {
+      title: "Templemore Abbey"
+    },
+    {
+      title: "Holy Cross Abbey"
+    }
+  ];

@@ -20,10 +20,21 @@ export const poilistJsonStore = {
     return poilist;
   },
 
+//  async getPoilistById(id) {
+//    await db.read();
+//    const list = db.data.poilists.find((poilist) => poilist._id === id);
+//    list.features = await featureJsonStore.getFeaturesByPoilistId(list._id);
+//    return list;
+//  },
+
   async getPoilistById(id) {
     await db.read();
-    const list = db.data.poilists.find((poilist) => poilist._id === id);
-    list.features = await featureJsonStore.getFeaturesByPoilistId(list._id);
+    let list = db.data.poilists.find((poilist) => poilist._id === id);
+    if (list) {
+      list.features = await featureJsonStore.getFeaturesByPoilistId(list._id);
+    } else {
+      list = null;
+    }
     return list;
   },
 
@@ -32,10 +43,17 @@ export const poilistJsonStore = {
     return db.data.poilists.filter((poilist) => poilist.userid === userid);
   },
 
+//  async deletePoilistById(id) {
+//    await db.read();
+//    const index = db.data.poilists.findIndex((poilist) => poilist._id === id);
+//    db.data.poilists.splice(index, 1);
+//    await db.write();
+//  },
+
   async deletePoilistById(id) {
     await db.read();
     const index = db.data.poilists.findIndex((poilist) => poilist._id === id);
-    db.data.poilists.splice(index, 1);
+    if (index !== -1) db.data.poilists.splice(index, 1);
     await db.write();
   },
 
