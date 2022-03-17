@@ -1,6 +1,6 @@
 import { assert } from "chai";
 import { db } from "../src/models/db.js";
-import { maggie, testUsers } from "./fixtures.js";
+import { joebloggs, testUsers } from "./fixtures.js";
 
 suite("User API tests", () => {
 
@@ -10,8 +10,8 @@ suite("User API tests", () => {
   });
 
   test("create a user", async () => {
-    const newUser = await db.userStore.addUser(maggie);
-    assert.equal(newUser, maggie);
+    const newUser = await db.userStore.addUser(joebloggs);
+    assert.equal(newUser, joebloggs);
   });
 
   test("delete all users", async () => {

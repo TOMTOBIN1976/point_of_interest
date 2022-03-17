@@ -1,27 +1,27 @@
-export const maggie = {
-    firstName: "Maggie",
-    lastName: "Simpson",
-    email: "maggie@simpson.com",
+export const joebloggs = {
+    firstName: "Joe",
+    lastName: "Bloggs",
+    email: "joebloggs@gmail.com",
     password: "secret",
   };
   
   export const testUsers = [
     {
-      firstName: "Homer",
-      lastName: "Simpson",
-      email: "homer@simpson.com",
+      firstName: "Sam",
+      lastName: "Suds",
+      email: "samsuds@gmail.com",
       password: "secret",
     },
     {
-      firstName: "Marge",
-      lastName: "Simpson",
-      email: "marge@simpson.com",
+      firstName: "Test",
+      lastName: "Testing",
+      email: "testing@icloud.com",
       password: "secret",
     },
     {
-      firstName: "Bart",
-      lastName: "Simpson",
-      email: "bart@simpson.com",
+      firstName: "Verification",
+      lastName: "Verification",
+      email: "verificatio@gmail.com",
       password: "secret",
     },
   ];
