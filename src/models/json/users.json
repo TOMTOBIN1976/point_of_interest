@@ -1,18 +1,25 @@
 {
   "users": [
     {
+      "firstName": "Sam",
+      "lastName": "Suds",
+      "email": "samsuds@gmail.com",
+      "password": "secret",
+      "_id": "b4f1bcca-81d9-4d77-8d63-3455c21e2aad"
+    },
+    {
       "firstName": "Test",
       "lastName": "Testing",
       "email": "testing@icloud.com",
       "password": "secret",
-      "_id": "39052e04-7e87-41b7-a23b-99e0e3b06939"
+      "_id": "ee9687da-d09e-4dd5-86cb-49912837992b"
     },
     {
       "firstName": "Verification",
       "lastName": "Verification",
       "email": "verificatio@gmail.com",
       "password": "secret",
-      "_id": "8e6387e9-9352-4c22-a381-1f6512e9475a"
+      "_id": "6ec7dcbd-c549-46f9-8656-d06fd4f73b75"
     }
   ]
 }
