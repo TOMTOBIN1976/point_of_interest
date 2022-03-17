@@ -1,4 +1,5 @@
 import { db } from "../models/db.js";
+import { FeatureSpec } from "../models/joi-schemas.js";
 
 export const poilistController = {
   index: {
@@ -13,6 +14,13 @@ export const poilistController = {
   },
 
   addFeature: {
+    validate: {
+      payload: FeatureSpec,
+      options: { abortEarly: false },
+      failAction: function (request, h, error) {
+        return h.view("poilist-view", { title: "Add feature error", errors: error.details }).takeover().code(400);
+      },
+    },
     handler: async function (request, h) {
       const poilist = await db.poilistStore.getPoilistById(request.params.id);
       const newFeature = {

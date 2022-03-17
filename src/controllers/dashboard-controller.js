@@ -1,4 +1,5 @@
 import { db } from "../models/db.js";
+import { PoilistSpec } from "../models/joi-schemas.js";
 
 export const dashboardController = {
   index: {
@@ -16,11 +17,20 @@ export const dashboardController = {
   },
 
   addPlaylist: {
+    validate: {
+      payload: PoilistSpec,
+      options: { abortEarly: false },
+      failAction: function (request, h, error) {
+        return h.view("dashboard-view", { title: "Add Poilist error", errors: error.details }).takeover().code(400);
+      },
+    },
     handler: async function (request, h) {
-      const newPlayList = {
+      const loggedInUser = request.auth.credentials;
+      const newPoiList = {
+        userid: loggedInUser._id,
         title: request.payload.title,
       };
-      await db.playlistStore.addPlaylist(newPlayList);
+      await db.poilistStore.addPoilist(newPoiList);
       return h.redirect("/dashboard");
     },
   },
