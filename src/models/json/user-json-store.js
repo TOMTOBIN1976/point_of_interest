@@ -26,6 +26,7 @@ export const userJsonStore = {
     return u;
   },
 
+  
   async getUserByEmail(email) {
     await db.read();
     let u = db.data.users.find((user) => user.email === email);
