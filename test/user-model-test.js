@@ -1,6 +1,6 @@
 import { assert } from "chai";
 import { db } from "../src/models/db.js";
-import { maggie, testUsers } from "./fixtures.js";
+import { joe, testUsers } from "./fixtures.js";
 
 suite("User API tests", () => {
 
@@ -14,8 +14,8 @@ suite("User API tests", () => {
   });
 
   test("create a user", async () => {
-    const newUser = await db.userStore.addUser(maggie);
-    assert.equal(newUser, maggie);
+    const newUser = await db.userStore.addUser(joe);
+    assert.equal(newUser, joe);
   });
 
   test("delete all users", async () => {
@@ -27,7 +27,7 @@ suite("User API tests", () => {
   });
 
   test("get a user - success", async () => {
-    const user = await db.userStore.addUser(maggie);
+    const user = await db.userStore.addUser(joe);
     const returnedUser1 = await db.userStore.getUserById(user._id);
     assert.deepEqual(user, returnedUser1);
     const returnedUser2 = await db.userStore.getUserByEmail(user.email);
