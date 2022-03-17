@@ -1,0 +1,18 @@
+{
+  "features": [
+    {
+      "description": "DD",
+      "location": "DD",
+      "category": "DD",
+      "_id": "c256a15f-cec2-4287-9360-0e4755895e02",
+      "poilistid": "b6acbe3a-ed8d-4d9e-8dd4-a30d94b1ccea"
+    },
+    {
+      "description": "DD",
+      "location": "DD",
+      "category": "DD",
+      "_id": "ad3869a4-5786-4af4-bc56-e4defc1f688e",
+      "poilistid": "b6acbe3a-ed8d-4d9e-8dd4-a30d94b1ccea"
+    }
+  ]
+}

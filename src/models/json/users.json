@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "firstName": "Tom",
+      "lastName": "Tobin",
+      "email": "homer@simpson.com",
+      "password": "a",
+      "_id": "9473c6c5-187e-4d21-b5b1-43bd60ca35a1"
+    },
+    {
+      "firstName": "Tom",
+      "lastName": "Tobin",
+      "email": "homer@simpson.com",
+      "password": "A",
+      "_id": "c97f42d5-34c6-46d3-8b80-b33e0e702a44"
+    },
+    {
+      "firstName": "Tom",
+      "lastName": "Tobin",
+      "email": "marge@simpson.com",
+      "password": "A",
+      "_id": "e40cf283-6595-43d4-b8f9-bb8ddb621dad"
+    },
+    {
+      "firstName": "Tom",
+      "lastName": "Tobin",
+      "email": "homer@simpson.com",
+      "password": "A",
+      "_id": "b985a71b-a42e-4d76-b1c6-03a916a82b48"
+    },
+    {
+      "firstName": "Tom",
+      "lastName": "Tobin",
+      "email": "marge@simpson.com",
+      "password": "A",
+      "_id": "8590a894-2370-43c4-b38e-01ebf2aea441"
+    }
+  ]
+}
