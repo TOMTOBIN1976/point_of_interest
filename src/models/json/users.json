@@ -153,6 +153,34 @@
       "email": "tomtobin2@gmail.com",
       "password": "Pass1274!",
       "_id": "e192426a-e47b-4d9d-bfd1-3df4884b800d"
+    },
+    {
+      "firstName": "Maggie",
+      "lastName": "Simpson",
+      "email": "maggie@simpson.com",
+      "password": "secret",
+      "_id": "ca87afa8-6896-4547-84db-06ebcf2df1b0"
+    },
+    {
+      "firstName": "Joe",
+      "lastName": "Bloggs",
+      "email": "joebloggs@gmail.com",
+      "password": "joebloggs",
+      "_id": "5dd75001-2896-446a-8de6-1966a1d8a0e8"
+    },
+    {
+      "firstName": "Joe",
+      "lastName": "Bloggs",
+      "email": "joebloggs@gmail.com",
+      "password": "joebloggs",
+      "_id": "d5ecdbe6-cb0d-4089-ae83-2d72fb24c789"
+    },
+    {
+      "firstName": "Joe",
+      "lastName": "Bloggs",
+      "email": "joebloggs@gmail.com",
+      "password": "joebloggs",
+      "_id": "b9cc8772-bea8-4532-92b1-c98d9d964c60"
     }
   ]
 }
