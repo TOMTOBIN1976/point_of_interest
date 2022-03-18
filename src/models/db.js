@@ -7,6 +7,7 @@ import { featureJsonStore } from "./json/feature-json-store.js";
 import { connectMongo } from "./mongo/connect.js";
 import { userMongoStore } from "./mongo/user-mongo-store.js";
 import { poilistMongoStore } from "./mongo/poilist-mongo-store.js";
+import { featureMongoStore } from "./mongo/feature-mongo-store.js";
 
 
 export const db = {
@@ -24,6 +25,7 @@ export const db = {
       case "mongo":
         this.userStore = userMongoStore;
         this.poilistStore = poilistMongoStore;
+        this.featureStore = featureMongoStore;
         connectMongo();
         break;
       default:
