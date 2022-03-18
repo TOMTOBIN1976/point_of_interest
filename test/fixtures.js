@@ -29,6 +29,16 @@
   export const castle = {
     title: "Cahircastle"
   };
+
+  export const rockcashel = {
+    "title": "Rock Cashel",
+    "location": "Mozart",
+    "category": 15
+  };
+  
+  export const abbey = {
+    title: "Thurles Abbey"
+  };
   
   export const testPoilists = [
     {
@@ -39,5 +49,23 @@
     },
     {
       title: "Holy Cross Abbey"
+    }
+  ];
+
+  export const testFeatures = [
+    {
+      "title": "Cahir Castle",
+      "location": "Cahir",
+      "category": 5
+    },
+    {
+      "title": "Rock of Cashel",
+      "location": "Cashel",
+      "category": 6
+    },
+    {
+      "title": "Holy Cross Abbey",
+      "location": "Thurles",
+      "category": 4
     }
   ];

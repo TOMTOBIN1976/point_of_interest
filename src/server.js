@@ -56,7 +56,7 @@ async function init() {
   db.init("mongo");
   server.route(webRoutes);
   await server.start();
-  console.log("Server running on %s", server.info.uri);
+  console.log("Server is running on %s", server.info.uri);
 }
 
 process.on("unhandledRejection", (err) => {
