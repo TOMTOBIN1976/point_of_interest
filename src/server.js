@@ -10,10 +10,6 @@ import { webRoutes } from "./web-routes.js";
 import { db } from "./models/db.js";
 import { accountsController } from "./controllers/accounts-controller.js";
 
-
-
-
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -56,7 +52,8 @@ async function init() {
   });
   server.auth.default("session");
 
-  db.init();
+ //   add "mongo" to the db.init() call in server.js if using Mongo
+  db.init("mongo");
   server.route(webRoutes);
   await server.start();
   console.log("Server running on %s", server.info.uri);

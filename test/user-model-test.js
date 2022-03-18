@@ -1,11 +1,12 @@
 import { assert } from "chai";
 import { db } from "../src/models/db.js";
 import { joe, testUsers } from "./fixtures.js";
+import { assertSubset } from "./test-utils.js";
 
 suite("User API tests", () => {
 
   setup(async () => {
-    db.init("json");
+    db.init("mongo");
     await db.userStore.deleteAll();
     for (let i = 0; i < testUsers.length; i += 1) {
       // eslint-disable-next-line no-await-in-loop
@@ -15,7 +16,8 @@ suite("User API tests", () => {
 
   test("create a user", async () => {
     const newUser = await db.userStore.addUser(joe);
-    assert.equal(newUser, joe);
+  //  assert.equal(newUser, joe);
+    assertSubset(joe, newUser);  // used for Mongo only
   });
 
   test("delete all users", async () => {
@@ -37,7 +39,8 @@ suite("User API tests", () => {
   test("delete One User - success", async () => {
     await db.userStore.deleteUserById(testUsers[0]._id);
     const returnedUsers = await db.userStore.getAllUsers();
-    assert.equal(returnedUsers.length, testUsers.length - 1);
+   // assert.equal(returnedUsers.length, testUsers.length - 1);
+    assertSubset(returnedUsers.length, testUsers.length - 1);
     const deletedUser = await db.userStore.getUserById(testUsers[0]._id);
     assert.isNull(deletedUser);
   });

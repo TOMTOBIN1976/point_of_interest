@@ -1,11 +1,12 @@
 import { assert } from "chai";
 import { db } from "../src/models/db.js";
 import { testPoilists, castle } from "./fixtures.js";
+import { assertSubset } from "./test-utils.js";
 
 suite("Point of Interest Model tests", () => {
 
   setup(async () => {
-    db.init("");
+    db.init("mongo");  // Leave blank except for mongo
     await db.poilistStore.deleteAllPoilists();
     for (let i = 0; i < testPoilists.length; i += 1) {
       // eslint-disable-next-line no-await-in-loop
@@ -15,7 +16,7 @@ suite("Point of Interest Model tests", () => {
 
   test("create a point of interest", async () => {
     const poilist = await db.poilistStore.addPoilist(castle);
-    assert.equal(castle, poilist);
+    assertSubset(castle, poilist);  
     assert.isDefined(poilist._id);
   });
 
@@ -30,7 +31,8 @@ suite("Point of Interest Model tests", () => {
   test("get a point of interest - success", async () => {
     const poilist = await db.poilistStore.addPoilist(castle);
     const returnedPoilist = await db.poilistStore.getPoilistById(poilist._id);
-    assert.equal(castle, poilist);
+  //  assert.equal(castle, poilist);
+    assertSubset(castle, poilist);
   });
 
   test("delete One point of interes - success", async () => {
