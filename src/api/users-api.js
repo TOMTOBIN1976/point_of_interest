@@ -12,7 +12,7 @@ export const userApi = {
         }
         return Boom.badImplementation("error creating user");
       } catch (err) {
-        return Boom.serverUnavailable("Database Error");
+        return Boom.serverUnavailable("Database Error!");
       }
     },
   },

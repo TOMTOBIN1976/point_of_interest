@@ -1,4 +1,6 @@
-    export const joe = {
+export const serviceUrl = "http://localhost:3000";
+
+export const joe = {
       firstName: "Joe",
       lastName: "Bloggs",
       email: "joebloggs@gmail.com",
