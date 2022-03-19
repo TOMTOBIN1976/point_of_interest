@@ -14,7 +14,7 @@ export const userApi = {
       } catch (err) {
         return Boom.serverUnavailable("Database Error!");
       }
-    },
+    },    
   },
 
   find: {
@@ -27,5 +27,8 @@ export const userApi = {
         return Boom.serverUnavailable("Database Error");
       }
     },
-  },
+    tags: ["api"],
+    description: "Get all userApi",
+    notes: "Returns details of all userApi",
+  },  
 };
