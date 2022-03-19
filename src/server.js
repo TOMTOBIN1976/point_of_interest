@@ -7,11 +7,12 @@ import path from "path";
 import { fileURLToPath } from "url";
 import Handlebars from "handlebars";
 import Joi from "joi";
+import HapiSwagger from "hapi-swagger";
 import { webRoutes } from "./web-routes.js";
 import { db } from "./models/db.js";
 import { accountsController } from "./controllers/accounts-controller.js";
 import { apiRoutes } from "./api-routes.js";
-import HapiSwagger from "hapi-swagger";
+
 
 
 
