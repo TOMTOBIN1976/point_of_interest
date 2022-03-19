@@ -10,6 +10,7 @@ export const webRoutes = [
   { method: "GET", path: "/logout", config: accountsController.logout },
   { method: "POST", path: "/register", config: accountsController.signup },
   { method: "POST", path: "/authenticate", config: accountsController.login },
+  
   { method: "GET", path: "/about", config: aboutController.index },
 
   { method: "GET", path: "/dashboard", config: dashboardController.index },
@@ -21,4 +22,5 @@ export const webRoutes = [
 
   { method: "GET", path: "/dashboard/deletepoilist/{id}", config: dashboardController.deletePoilist },
   { method: "GET", path: "/poilist/{id}/deletefeature/{featureid}", config: poilistController.deleteFeature },
+  { method: "GET", path: "/{param*}", handler: { directory: { path: "./public" } }, options: { auth: false } }
 ];
