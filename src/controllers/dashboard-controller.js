@@ -11,7 +11,7 @@ export const dashboardController = {
         title: "POI Dashboard",
         user: loggedInUser,
         poilists: poilists,
-      };
+      };      
       return h.view("dashboard-view", viewData);
     },
   },

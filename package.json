@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node src/server.js",
     "lint": "eslint . --ext .js",
-    "test": "mocha --ui tdd test/**.js"
+    "test": "mocha --ui tdd test/**/*.js"
   },
   "author": "",
   "license": "ISC",
@@ -21,6 +21,7 @@
     "prettier": "^2.5.1"
   },
   "dependencies": {
+    "@hapi/boom": "^9.1.4",
     "@hapi/cookie": "^11.0.2",
     "@hapi/hapi": "^20.2.1",
     "@hapi/vision": "^6.1.0",
