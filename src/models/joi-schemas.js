@@ -30,7 +30,7 @@ export const UserCredentialsSpec = {
 export const FeatureSpec = {
   description: Joi.string().required(),
   location: Joi.string().required(),
-  category: Joi.number().allow("").optional(),
+  category: Joi.string().required(),
 };
 
 export const PoilistSpec = {

@@ -14,7 +14,6 @@ export const webRoutes = [
   { method: "GET", path: "/about", config: aboutController.index },
 
   { method: "GET", path: "/dashboard", config: dashboardController.index },
-  { method: "POST", path: "/dashboard/addplaylist", config: dashboardController.addPlaylist },
   { method: "POST", path: "/dashboard/addpoilist", config: dashboardController.addPoilist },
 
   { method: "GET", path: "/poilist/{id}", config: poilistController.index },
